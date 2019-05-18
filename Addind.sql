@@ -1,0 +1,60 @@
+INSERT INTO bd_project.player_contract(team_id,player_id,start_dt, exp_dt, salary_amt) VALUES (NULL,NULL,'2017-11-25' ,'2022-11-25' ,35000000);
+INSERT INTO bd_project.player(contract_id, captain_flg, player_nm, position_txt) VALUES (1,1,'Lionel Messi' , 'RWF' );
+UPDATE bd_project.player_contract set player_id=1 where player_id is NULL ;
+INSERT INTO bd_project.stadium(stadium_nm, city_nm, capacity_amt) values ('Camp Nou', 'Barcelona', 85000);
+INSERT INTO bd_project.football_team(coach_contract_id,team_nm, budget_ast, stadium_id) VALUES (NULL,' FC BARCELONA',1000000000,1);
+UPDATE bd_project.player_contract set team_id=1 where team_id is NULL ;
+INSERT INTO bd_project.coach_contract(team_id, coach_id, start_dt, exp_dt, salary_amt) values (1,NULL,'2017-09-27','2020-01-29',5000000);
+UPDATE bd_project.football_team set coach_contract_id=1 where coach_contract_id is NULL;
+INSERT INTO bd_project.coach(contract_id, scheme_txt, coach_nm) values (1,'4-3-3', 'Ernesto Valverde');
+UPDATE bd_project.coach_contract set coach_id=1 where coach_id is NULL;
+
+INSERT INTO bd_project.player_contract(team_id,player_id,start_dt, exp_dt, salary_amt) VALUES (NULL,NULL,'2018-11-27' ,'2020-11-25' ,10000000);
+INSERT INTO bd_project.player(contract_id, captain_flg, player_nm, position_txt) VALUES (2,1,'Sergio Ramos' , 'DF' );
+UPDATE bd_project.player_contract set player_id=2 where player_id is NULL ;
+INSERT INTO bd_project.stadium(stadium_nm, city_nm, capacity_amt) values ('Santiago Barnabeu', 'Madrid', 90000);
+INSERT INTO bd_project.football_team(coach_contract_id,team_nm, budget_ast, stadium_id) VALUES (NULL,' FC REAL MADRID',900000000,2);
+UPDATE bd_project.player_contract set team_id=2 where team_id is NULL ;
+INSERT INTO bd_project.coach_contract(team_id, coach_id, start_dt, exp_dt, salary_amt) values (2,NULL,'2019-07-23','2022-01-29',12000000);
+UPDATE bd_project.football_team set coach_contract_id=2 where coach_contract_id is NULL;
+INSERT INTO bd_project.coach(contract_id, scheme_txt, coach_nm) values (2,'4-4-2', 'Zinedin Zidane');
+UPDATE bd_project.coach_contract set coach_id=2 where coach_id is NULL;
+
+INSERT INTO bd_project.player_contract(team_id,player_id,start_dt, exp_dt, salary_amt) VALUES (NULL,NULL,'2016-09-23' ,'2020-12-27' ,17000000);
+INSERT INTO bd_project.player(contract_id, captain_flg, player_nm, position_txt) VALUES (3,0,'Mohhammed Salah' , 'RWF' );
+UPDATE bd_project.player_contract set player_id=3 where player_id is NULL ;
+INSERT INTO bd_project.stadium(stadium_nm, city_nm, capacity_amt) values ('Enfiled', 'Liverpool', 90000);
+INSERT INTO bd_project.football_team(coach_contract_id,team_nm, budget_ast, stadium_id) VALUES (NULL,' FC Liverpool',110000000,3);
+UPDATE bd_project.player_contract set team_id=3 where team_id is NULL ;
+INSERT INTO bd_project.coach_contract(team_id, coach_id, start_dt, exp_dt, salary_amt) values (3,NULL,'2019-07-23','2022-01-29',12000000);
+UPDATE bd_project.football_team set coach_contract_id=3 where coach_contract_id is NULL;
+INSERT INTO bd_project.coach(contract_id, scheme_txt, coach_nm) values (3,'4-3-3', 'Jurgen Kloop');
+UPDATE bd_project.coach_contract set coach_id=3 where coach_id is NULL;
+
+INSERT INTO bd_project.player_contract(team_id,player_id,start_dt, exp_dt, salary_amt) VALUES (NULL,NULL,'2018-08-14' ,'2020-07-30' ,24000000);
+INSERT INTO bd_project.player(contract_id, captain_flg, player_nm, position_txt) VALUES (4,0,'Cristiano Ronaldo' , 'CF' );
+UPDATE bd_project.player_contract set player_id=4 where player_id is NULL ;
+INSERT INTO bd_project.stadium(stadium_nm, city_nm, capacity_amt) values ('Allianz Sradium', 'Turin', 77000);
+INSERT INTO bd_project.football_team(coach_contract_id,team_nm, budget_ast, stadium_id) VALUES (NULL,' FC Juventus',800000000,4);
+UPDATE bd_project.player_contract set team_id=4 where team_id is NULL ;
+INSERT INTO bd_project.coach_contract(team_id, coach_id, start_dt, exp_dt, salary_amt) values (4,NULL,'2013-07-23','2020-09-01',15000000);
+UPDATE bd_project.football_team set coach_contract_id=4 where coach_contract_id is NULL;
+INSERT INTO bd_project.coach(contract_id, scheme_txt, coach_nm) values (4,'4-3-1-2', 'Massimiliano Allegri');
+UPDATE bd_project.coach_contract set coach_id=4 where coach_id is NULL;
+
+INSERT INTO bd_project.player_contract(team_id,player_id,start_dt, exp_dt, salary_amt) VALUES (NULL,NULL,'2016-06-01' ,'2021-07-03' ,12000000);
+INSERT INTO bd_project.player(contract_id, captain_flg, player_nm, position_txt) VALUES (5,0,'Kevin De Breyune' , 'CMF' );
+UPDATE bd_project.player_contract set player_id=5 where player_id is NULL ;
+INSERT INTO bd_project.stadium(stadium_nm, city_nm, capacity_amt) values ('Ethihad Stadium', 'Manchester', 90000);
+INSERT INTO bd_project.football_team(coach_contract_id,team_nm, budget_ast, stadium_id) VALUES (NULL,' FC Manchester City',150000000,5);
+UPDATE bd_project.player_contract set team_id=5 where team_id is NULL ;
+INSERT INTO bd_project.coach_contract(team_id, coach_id, start_dt, exp_dt, salary_amt) values (5,NULL,'2017-07-23','2022-07-30',14000000);
+UPDATE bd_project.football_team set coach_contract_id=5 where coach_contract_id is NULL;
+INSERT INTO bd_project.coach(contract_id, scheme_txt, coach_nm) values (5,'4-2-2-2', 'Josep Guardiola');
+UPDATE bd_project.coach_contract set coach_id=5 where coach_id is NULL;
+
+INSERT into bd_project.match(match_dt, host_tm_id, guest_tm_id, income_ast, result_txt) values ('2019-01-05',1,3,45000000,'3-0');
+INSERT into bd_project.match(match_dt, host_tm_id, guest_tm_id, income_ast, result_txt) values ('2019-06-05',3,1,55000000,'4-0');
+INSERT into bd_project.match(match_dt, host_tm_id, guest_tm_id, income_ast, result_txt) values ('2019-02-27',2,1,40000000,'0-3');
+INSERT into bd_project.match(match_dt, host_tm_id, guest_tm_id, income_ast, result_txt) values ('2019-03-02',1,2,41000000,'1-0');
+INSERT into bd_project.match(match_dt, host_tm_id, guest_tm_id, income_ast, result_txt) values ('2019-01-03',5,3,45000000,'2-1');
