@@ -1,0 +1,28 @@
+SELECT team_nm from bd_project.football_team
+  inner join bd_project.player_contract
+    on bd_project.player_contract.team_id=bd_project.football_team.team_id
+group by bd_project.football_team.team_nm,football_team.budget_ast
+having sum(player_contract.salary_amt)>football_team.budget_ast;
+
+SELECT coach_nm from bd_project.coach
+  inner join bd_project.coach_contract
+    on bd_project.coach.coach_id =bd_project. coach_contract.coach_id
+group by coach_nm, salary_amt
+HAVING salary_amt= (select max(salary_amt) from bd_project.coach_contract );
+
+SELECT player_nm from bd_project.player
+  inner join bd_project.player_contract
+    on bd_project.player.player_id =bd_project. player_contract.player_id
+group by player_nm, salary_amt
+HAVING salary_amt= (select max(salary_amt) from bd_project.player_contract );
+
+Select player_nm from (
+SELECT * from bd_project.player
+  inner join bd_project.player_contract
+    on player.player_id = player_contract.player_id) t1
+  inner join (SELECT * from bd_project.player_contract
+  inner join bd_project.football_team
+    on player_contract.team_id = player_contract.team_id)t2
+    on  t1.player_contract.player_id=t2.player_conract.player_id
+  group by t1.player_nm
+ having t1.salary_amt=(select max( t2.salary_amt));
